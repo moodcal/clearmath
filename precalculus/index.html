@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <title>Precalculus - ClearMath</title>
+    <style>
+        :root {
+            --primary-color: #1E88E5;
+            --secondary-color: #FFC107;
+            --text-color: #333;
+            --background-color: #F5F5F5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .chapter-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .chapter-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .chapter-card ul {
+            padding-left: 20px;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: opacity 0.3s;
+        }
+        
+        footer a:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">ClearMath</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../math-symbols.html">Math Symbols</a></li>
+                <li><a href="index.html">Precalculus</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Precalculus</h1>
+            <p>Explore the foundations of advanced mathematics</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="chapter-grid">
+            <div class="chapter-card">
+                <h3>Chapter 1: Functions and Their Graphs</h3>
+                <ul>
+                    <li>Linear Functions</li>
+                    <li>Quadratic Functions</li>
+                    <li>Polynomial Functions</li>
+                    <li>Rational Functions</li>
+                </ul>
+                <a href="chapter1_review.md">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 1: Functions and Their Graphs</h3>
+                <ul>
+                    <li>Linear Functions</li>
+                    <li>Quadratic Functions</li>
+                    <li>Polynomial Functions</li>
+                    <li>Rational Functions</li>
+                </ul>
+                <a href="chapter1_review.html">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 2: Polynomial and Rational Functions</h3>
+                <ul>
+                    <li>Polynomial Functions</li>
+                    <li>Rational Functions</li>
+                    <li>Polynomial and Rational Inequalities</li>
+                </ul>
+                <a href="chapter2_review.html">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 3: Exponential and Logarithmic Functions</h3>
+                <ul>
+                    <li>Exponential Functions</li>
+                    <li>Logarithmic Functions</li>
+                    <li>Exponential and Logarithmic Equations</li>
+                </ul>
+                <a href="chapter3_review.html">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 4: Trigonometric Functions</h3>
+                <ul>
+                    <li>Angles and Radian Measure</li>
+                    <li>Trigonometric Functions</li>
+                    <li>Graphs of Trigonometric Functions</li>
+                </ul>
+                <a href="chapter4_review.html">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 5: Analytic Trigonometry</h3>
+                <ul>
+                    <li>Trigonometric Identities</li>
+                    <li>Trigonometric Equations</li>
+                    <li>Inverse Trigonometric Functions</li>
+                </ul>
+                <a href="chapter5_review.html">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 6: Additional Topics in Trigonometry</h3>
+                <ul>
+                    <li>Law of Sines</li>
+                    <li>Law of Cosines</li>
+                    <li>Vectors</li>
+                </ul>
+                <a href="chapter6_review.html">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 7: Systems of Equations and Inequalities</h3>
+                <ul>
+                    <li>Systems of Linear Equations</li>
+                    <li>Systems of Nonlinear Equations</li>
+                    <li>Systems of Inequalities</li>
+                </ul>
+                <a href="chapter7_review.html">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 8: Matrices and Determinants</h3>
+                <ul>
+                    <li>Matrix Operations</li>
+                    <li>Determinants</li>
+                    <li>Solving Systems with Matrices</li>
+                </ul>
+                <a href="chapter8_review.html">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 9: Sequences, Series, and Probability</h3>
+                <ul>
+                    <li>Sequences and Series</li>
+                    <li>Mathematical Induction</li>
+                    <li>Probability</li>
+                </ul>
+                <a href="chapter9_review.html">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 10: Topics in Analytic Geometry</h3>
+                <ul>
+                    <li>The Ellipse</li>
+                    <li>The Hyperbola</li>
+                    <li>The Parabola</li>
+                </ul>
+                <a href="chapter10_review.html">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 11: Limits and Continuity</h3>
+                <ul>
+                    <li>Introduction to Limits</li>
+                    <li>Techniques for Evaluating Limits</li>
+                    <li>Continuity</li>
+                </ul>
+                <a href="chapter11_review.html">Chapter Review</a>
+            </div>
+            <div class="chapter-card">
+                <h3>Chapter 12: Introduction to Calculus</h3>
+                <ul>
+                    <li>The Derivative</li>
+                    <li>Basic Differentiation Rules</li>
+                    <li>Applications of Derivatives</li>
+                </ul>
+                <a href="chapter12_review.html">Chapter Review</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ClearMath. All rights reserved.</p>
+            <p>
+                <a href="../privacy-policy.html">Privacy Policy</a> | 
+                <a href="../terms-of-service.html">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
