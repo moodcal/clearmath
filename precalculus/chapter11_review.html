@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter11_review.md</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body class="markdown-body">
+<h4 id="sequences">Sequences</h4>
+<p>A sequence is a function whose domain is the set of natural numbers. Instead of writing <span class="arithmatex">\(a(n)\)</span> for the value of the sequence at <span class="arithmatex">\(n\)</span>, we generally write <span class="arithmatex">\(a_{n}\)</span>, and we refer to this value as the <span class="arithmatex">\(\boldsymbol{n}\)</span> th term of the sequence. Sequences are often described in list form:</p>
+<div class="arithmatex">\[
+a_{1}, a_{2}, a_{3}, \ldots
+\]</div>
+<h4 id="partial-sums-of-a-sequence">Partial Sums of a Sequence</h4>
+<p>For the sequence <span class="arithmatex">\(a_{1}, a_{2}, a_{3}, \ldots\)</span> the <span class="arithmatex">\(\boldsymbol{n}\)</span> th partial sum <span class="arithmatex">\(S_{n}\)</span> is the sum of the first <span class="arithmatex">\(n\)</span> terms of the sequence:</p>
+<div class="arithmatex">\[
+S_{n}=a_{1}+a_{2}+a_{3}+\cdots+a_{n}
+\]</div>
+<p>The <span class="arithmatex">\(n\)</span>th partial sum of a sequence can also be expressed by using sigma notation:</p>
+<div class="arithmatex">\[
+S_{n}=\sum_{k=1}^{n} a_{k}
+\]</div>
+<h4 id="arithmetic-sequences">Arithmetic Sequences</h4>
+<p>An arithmetic sequence is a sequence whose terms are obtained by adding the same fixed constant <span class="arithmatex">\(d\)</span> to each term to get the next term. Thus an arithmetic sequence has the form</p>
+<div class="arithmatex">\[
+a, a+d, a+2 d, a+3 d, \ldots
+\]</div>
+<p>The number <span class="arithmatex">\(a\)</span> is the first term of the sequence, and the number <span class="arithmatex">\(d\)</span> is the common difference. The <span class="arithmatex">\(n\)</span>th term of the sequence is</p>
+<div class="arithmatex">\[
+a_{n}=a+(n-1) d
+\]</div>
+<h4 id="partial-sums-of-an-arithmetic-sequence">Partial Sums of an Arithmetic Sequence</h4>
+<p>For the arithmetic sequence <span class="arithmatex">\(a_{n}=a+(n-1) d\)</span> the <span class="arithmatex">\(n\)</span>th partial <span class="arithmatex">\(\operatorname{sum} S_{n}=\sum_{k=1}^{n}[a+(k-1) d]\)</span> is given by either of the following equivalent formulas:</p>
+<ol>
+<li><span class="arithmatex">\(S_{n}=\frac{n}{2}[2 a+(n-1) d]\)</span></li>
+<li><span class="arithmatex">\(S_{n}=n\left(\frac{a+a_{n}}{2}\right)\)</span></li>
+</ol>
+<h4 id="geometric-sequences">Geometric Sequences</h4>
+<p>A geometric sequence is a sequence whose terms are obtained by multiplying each term by the same fixed constant <span class="arithmatex">\(r\)</span> to get the next term. Thus a geometric sequence has the form</p>
+<div class="arithmatex">\[
+a, a r, a r^{2}, a r^{3}, \ldots
+\]</div>
+<p>The number <span class="arithmatex">\(a\)</span> is the first term of the sequence, and the number <span class="arithmatex">\(r\)</span> is the common ratio. The <span class="arithmatex">\(n\)</span>th term of the sequence is</p>
+<div class="arithmatex">\[
+a_{n}=a r^{n-1}
+\]</div>
+<h4 id="partial-sums-of-a-geometric-sequence">Partial Sums of a Geometric Sequence</h4>
+<p>For the geometric sequence <span class="arithmatex">\(a_{n}=a r^{n-1}\)</span> the <span class="arithmatex">\(n\)</span>th partial sum <span class="arithmatex">\(S_{n}=\sum_{k=1}^{n} a r^{k-1}(\)</span> where <span class="arithmatex">\(r \neq 1)\)</span> is given by</p>
+<div class="arithmatex">\[
+S_{n}=a \frac{1-r^{n}}{1-r}
+\]</div>
+<h4 id="infinite-geometric-series">Infinite Geometric Series</h4>
+<p>An infinite geometric series is a series of the form</p>
+<div class="arithmatex">\[
+a+a r+a r^{2}+a r^{3}+\cdots+a r^{n-1}+\cdots
+\]</div>
+<p>An infinite geometric series for which <span class="arithmatex">\(|r|&lt;1\)</span> has the sum</p>
+<div class="arithmatex">\[
+S=\frac{a}{1-r}
+\]</div>
+<h4 id="principle-of-mathematical-induction">Principle of Mathematical Induction</h4>
+<p>For each natural number <span class="arithmatex">\(n\)</span>, let <span class="arithmatex">\(P(n)\)</span> be a statement that depends on <span class="arithmatex">\(n\)</span>. Suppose that each of the following conditions is satisfied.</p>
+<ol>
+<li><span class="arithmatex">\(P(1)\)</span> is true.</li>
+<li>For every natural number <span class="arithmatex">\(k\)</span>, if <span class="arithmatex">\(P(k)\)</span> is true, then <span class="arithmatex">\(P(k+1)\)</span> is true.</li>
+</ol>
+<p>Then <span class="arithmatex">\(P(n)\)</span> is true for all natural numbers <span class="arithmatex">\(n\)</span>.</p>
+</body>
+</html>

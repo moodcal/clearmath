@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter9_review.md</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body class="markdown-body">
+<h4 id="systems-of-equations">Systems of Equations</h4>
+<p>A system of equations is a set of equations that involve the same variables. A system of linear equations is a system of equations in which each equation is linear. Systems of linear equations in two variables <span class="arithmatex">\((x\)</span> and <span class="arithmatex">\(y)\)</span> and three variables <span class="arithmatex">\((x, y\)</span>, and <span class="arithmatex">\(z\)</span> ) have the following forms:</p>
+<div class="arithmatex">\[
+\begin{array}{cc}
+\text { Linear system } &amp; \text { Linear system } \\
+\text { 2 variables } &amp; \text { 3 variables } \\
+a_{11} x+a_{12} y=b_{1} &amp; a_{11} x+a_{12} y+a_{13} z=b_{1} \\
+a_{21} x+a_{22} y=b_{2} &amp; a_{21} x+a_{22} y+a_{23} z=b_{2} \\
+&amp; a_{31} x+a_{32} y+a_{33} z=b_{3}
+\end{array}
+\]</div>
+<p>A solution of a system of equations is an assignment of values for the variables that makes each equation in the system true. To solve a system means to find all solutions of the system.</p>
+<h4 id="substitution-method">Substitution Method</h4>
+<p>To solve a pair of equations in two variables by substitution:</p>
+<ol>
+<li>Solve for one variable in terms of the other variable in one equation.</li>
+<li>Substitute into the other equation to get an equation in one variable, and solve for this variable.</li>
+<li>Back-substitute the value(s) of the variable you have found into either original equation, and solve for the remaining variable.</li>
+</ol>
+<h4 id="elimination-method">Elimination Method</h4>
+<p>To solve a pair of equations in two variables by elimination:</p>
+<ol>
+<li>Adjust the coefficients by multiplying the equations by appropriate constants so that the term(s) involving one of the variables are of opposite signs in the equations.</li>
+<li>Add the equations to eliminate that one variable; this gives an equation in the other variable. Solve for this variable.</li>
+<li>Back-substitute the value(s) of the variable that you have found into either original equation, and solve for the remaining variable.</li>
+</ol>
+<h4 id="graphical-method">Graphical Method</h4>
+<p>To solve a pair of equations in two variables graphically, first put each equation in function form, <span class="arithmatex">\(y=f(x)\)</span>.</p>
+<ol>
+<li>Graph the equations on a common screen.</li>
+<li>Find the points of intersection of the graphs. The solutions are the <span class="arithmatex">\(x\)</span> - and <span class="arithmatex">\(y\)</span>-coordinates of the points of intersection.</li>
+</ol>
+<h4 id="gaussian-elimination">Gaussian Elimination</h4>
+<p>To use Gaussian elimination to solve a system of linear equations, use the following operations to change the system to an equivalent simpler system:</p>
+<ol>
+<li>Add a nonzero multiple of one equation to another.</li>
+<li>Multiply an equation by a nonzero constant.</li>
+<li>Interchange the position of two equations in the system.</li>
+</ol>
+<h4 id="number-of-solutions-of-a-linear-system">Number of Solutions of a Linear System</h4>
+<p>A system of linear equations can have:</p>
+<ol>
+<li>A unique solution for each variable.</li>
+<li>No solution, in which case the system is inconsistent.</li>
+<li>Infinitely many solutions, in which case the system is dependent.</li>
+</ol>
+<h4 id="how-to-determine-the-number-of-solutions-of-a-linear-system">How to Determine the Number of Solutions of a Linear System</h4>
+<p>When Gaussian elimination is used to solve a system of linear equations, then we can tell that the system has:</p>
+<ol>
+<li>No solution (is inconsistent) if we arrive at a false equation of the form <span class="arithmatex">\(0=c\)</span>, where <span class="arithmatex">\(c\)</span> is nonzero.</li>
+<li>Infinitely many solutions (is dependent) if the system is consistent but we end up with fewer equations than variables (after discarding redundant equations of the form <span class="arithmatex">\(0=0\)</span> ).</li>
+</ol>
+<h4 id="matrices">Matrices</h4>
+<p>A matrix <span class="arithmatex">\(A\)</span> of dimension <span class="arithmatex">\(m \times n\)</span> is a rectangular array of numbers with <span class="arithmatex">\(m\)</span> rows and <span class="arithmatex">\(n\)</span> columns:</p>
+<div class="arithmatex">\[
+A=\left[\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2 n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m 1} &amp; a_{m 2} &amp; \cdots &amp; a_{m n}
+\end{array}\right]
+\]</div>
+<h4 id="augmented-matrix-of-a-system">Augmented Matrix of a System</h4>
+<p>The augmented matrix of a system of linear equations is the matrix consisting of the coefficients and the constant terms. For example, for the two-variable system</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; a_{11} x+a_{12} x=b_{1} \\
+&amp; a_{21} x+a_{22} x=b_{2}
+\end{aligned}
+\]</div>
+<p>the augmented matrix is</p>
+<div class="arithmatex">\[
+\left[\begin{array}{lll}
+a_{11} &amp; a_{12} &amp; b_{1} \\
+a_{21} &amp; a_{22} &amp; b_{2}
+\end{array}\right]
+\]</div>
+<h4 id="elementary-row-operations">Elementary Row Operations</h4>
+<p>To solve a system of linear equations using the augmented matrix of the system, the following operations can be used to transform the rows of the matrix:</p>
+<ol>
+<li>Add a nonzero multiple of one row to another.</li>
+<li>Multiply a row by a nonzero constant.</li>
+<li>Interchange two rows.</li>
+</ol>
+<h4 id="row-echelon-form-of-a-matrix">Row-Echelon Form of a Matrix</h4>
+<p>A matrix is in row-echelon form if its entries satisfy the following conditions:</p>
+<ol>
+<li>The first nonzero entry in each row (the leading entry) is the number 1.</li>
+<li>The leading entry of each row is to the right of the leading entry in the row above it.</li>
+<li>All rows consisting entirely of zeros are at the bottom of the matrix.</li>
+</ol>
+<p>If the matrix also satisfies the following condition, it is in reduced row-echelon form:
+4. If a column contains a leading entry, then every other entry in that column is a 0 .</p>
+<h4 id="number-of-solutions-of-a-linear-system_1">Number of Solutions of a Linear System</h4>
+<p>If the augmented matrix of a system of linear equations has been reduced to row-echelon form using elementary row operations, then the system has:</p>
+<ol>
+<li>No solution if the row-echelon form contains a row that represents the equation <span class="arithmatex">\(0=1\)</span>. In this case the system is inconsistent.</li>
+<li>One solution if each variable in the row-echelon form is a leading variable.</li>
+<li>Infinitely many solutions if the system is not inconsistent but not every variable is a leading variable. In this case the system is dependent.</li>
+</ol>
+<h4 id="operations-on-matrices">Operations on Matrices</h4>
+<p>If <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are <span class="arithmatex">\(m \times n\)</span> matrices and <span class="arithmatex">\(c\)</span> is a scalar (real number), then:</p>
+<ol>
+<li>The <span class="arithmatex">\(\operatorname{sum} A+B\)</span> is the <span class="arithmatex">\(m \times n\)</span> matrix that is obtained by adding corresponding entries of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>.</li>
+<li>The difference <span class="arithmatex">\(A-B\)</span> is the <span class="arithmatex">\(m \times n\)</span> matrix that is obtained by subtracting corresponding entries of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>.</li>
+<li>The scalar product <span class="arithmatex">\(c A\)</span> is the <span class="arithmatex">\(m \times n\)</span> matrix that is obtained by multiplying each entry of <span class="arithmatex">\(A\)</span> by <span class="arithmatex">\(c\)</span>.</li>
+</ol>
+<h4 id="multiplication-of-matrices">Multiplication of Matrices</h4>
+<p>If <span class="arithmatex">\(A\)</span> is an <span class="arithmatex">\(m \times n\)</span> matrix and <span class="arithmatex">\(B\)</span> is an <span class="arithmatex">\(n \times k\)</span> matrix (so the number of columns of matrix <span class="arithmatex">\(A\)</span> is the same as the number of rows of matrix <span class="arithmatex">\(B\)</span> ), then the matrix product <span class="arithmatex">\(A B\)</span> is the <span class="arithmatex">\(m \times k\)</span> matrix whose <span class="arithmatex">\(i j\)</span>-entry is the inner product of the <span class="arithmatex">\(i\)</span> th row of <span class="arithmatex">\(A\)</span> and the <span class="arithmatex">\(j\)</span> th column of <span class="arithmatex">\(B\)</span>.</p>
+<h4 id="properties-of-matrix-operations">Properties of Matrix Operations</h4>
+<p>If <span class="arithmatex">\(A, B\)</span>, and <span class="arithmatex">\(C\)</span> are matrices of compatible dimensions, then the following properties hold:</p>
+<ol>
+<li>Commutativity of addition:</li>
+</ol>
+<div class="arithmatex">\[
+A+B=B+A
+\]</div>
+<ol>
+<li>Associativity:</li>
+</ol>
+<div class="arithmatex">\[
+\begin{gathered}
+(A+B)+C=A+(B+C) \\
+(A B) C=A(B C)
+\end{gathered}
+\]</div>
+<ol>
+<li>Distributivity:</li>
+</ol>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; A(B+C)=A B+A C \\
+&amp; (B+C) A=B A+C A
+\end{aligned}
+\]</div>
+<p>(Note that matrix multiplication is not commutative.)</p>
+<h4 id="identity-matrix">Identity Matrix</h4>
+<p>The identity matrix <span class="arithmatex">\(I_{n}\)</span> is the <span class="arithmatex">\(n \times n\)</span> matrix whose main diagonal entries are all 1 and whose other entries are all 0 :</p>
+<div class="arithmatex">\[
+I_{n}=\left[\begin{array}{cccc}
+1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 1
+\end{array}\right]
+\]</div>
+<p>If <span class="arithmatex">\(A\)</span> is an <span class="arithmatex">\(m \times n\)</span> matrix, then</p>
+<div class="arithmatex">\[
+A I_{n}=A \quad \text { and } \quad I_{m} A=A
+\]</div>
+<h4 id="inverse-of-a-matrix">Inverse of a Matrix</h4>
+<p>If <span class="arithmatex">\(A\)</span> is an <span class="arithmatex">\(n \times n\)</span> matrix, then the inverse of <span class="arithmatex">\(A\)</span> is the <span class="arithmatex">\(n \times n\)</span> matrix <span class="arithmatex">\(A^{-1}\)</span> with the following properties:</p>
+<div class="arithmatex">\[
+A^{-1} A=I_{n} \quad \text { and } \quad A A^{-1}=I_{n}
+\]</div>
+<p>To find the inverse of a matrix, we use a procedure involving elementary row operations. (Note that some square matrices do not have an inverse.)</p>
+<h4 id="inverse-of-a-2-times-2-matrix">Inverse of a <span class="arithmatex">\(2 \times 2\)</span> Matrix</h4>
+<p>For <span class="arithmatex">\(2 \times 2\)</span> matrices the following special rule provides a shortcut for finding the inverse:</p>
+<div class="arithmatex">\[
+A=\left[\begin{array}{ll}
+a &amp; b \\
+c &amp; d
+\end{array}\right] \Rightarrow A^{-1}=\frac{1}{a d-b c}\left[\begin{array}{rr}
+d &amp; -b \\
+-c &amp; a
+\end{array}\right]
+\]</div>
+<h4 id="writing-a-linear-system-as-a-matrix-equation">Writing a Linear System as a Matrix Equation</h4>
+<p>A system of <span class="arithmatex">\(n\)</span> linear equations in <span class="arithmatex">\(n\)</span> variables can be written as a single matrix equation</p>
+<div class="arithmatex">\[
+A X=B
+\]</div>
+<p>where <span class="arithmatex">\(A\)</span> is the <span class="arithmatex">\(n \times n\)</span> matrix of coefficients, <span class="arithmatex">\(X\)</span> is the <span class="arithmatex">\(n \times 1\)</span> matrix of the variables, and <span class="arithmatex">\(B\)</span> is the <span class="arithmatex">\(n \times 1\)</span> matrix of the constants. For example, the linear system of two equations in two variables</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; a_{11} x+a_{12} x=b_{1} \\
+&amp; a_{21} x+a_{22} x=b_{2}
+\end{aligned}
+\]</div>
+<p>can be expressed as</p>
+<div class="arithmatex">\[
+\left[\begin{array}{ll}
+a_{11} &amp; a_{12} \\
+a_{21} &amp; a_{22}
+\end{array}\right]\left[\begin{array}{l}
+x \\
+y
+\end{array}\right]=\left[\begin{array}{l}
+b_{1} \\
+b_{2}
+\end{array}\right]
+\]</div>
+<h4 id="solving-matrix-equations">Solving Matrix Equations</h4>
+<p>If <span class="arithmatex">\(A\)</span> is an invertible <span class="arithmatex">\(n \times n\)</span> matrix, <span class="arithmatex">\(X\)</span> is an <span class="arithmatex">\(n \times 1\)</span> variable matrix, and <span class="arithmatex">\(B\)</span> is an <span class="arithmatex">\(n \times 1\)</span> constant matrix, then the matrix equation</p>
+<div class="arithmatex">\[
+A X=B
+\]</div>
+<p>has the unique solution</p>
+<div class="arithmatex">\[
+X=A^{-1} B
+\]</div>
+<h4 id="determinant-of-a-2-times-2-matrix">Determinant of a <span class="arithmatex">\(2 \times 2\)</span> Matrix</h4>
+<p>The determinant of the matrix</p>
+<div class="arithmatex">\[
+A=\left[\begin{array}{ll}
+a &amp; b \\
+c &amp; d
+\end{array}\right]
+\]</div>
+<p>is the number</p>
+<div class="arithmatex">\[
+\operatorname{det}(A)=|A|=a d-b c
+\]</div>
+<h4 id="minors-and-cofactors">Minors and Cofactors</h4>
+<p>If <span class="arithmatex">\(A=\left|a_{i j}\right|\)</span> is an <span class="arithmatex">\(n \times n\)</span> matrix, then the minor <span class="arithmatex">\(M_{i j}\)</span> of the entry <span class="arithmatex">\(a_{i j}\)</span> is the determinant of the matrix obtained by deleting the <span class="arithmatex">\(i\)</span> th row and the <span class="arithmatex">\(j\)</span> th column of <span class="arithmatex">\(A\)</span>.</p>
+<p>The cofactor <span class="arithmatex">\(A_{i j}\)</span> of the entry <span class="arithmatex">\(a_{i j}\)</span> is</p>
+<div class="arithmatex">\[
+A_{i j}=(-1)^{i+j} M_{i j}
+\]</div>
+<p>(Thus, the minor and the cofactor of each entry either are the same or are negatives of each other.)</p>
+<h4 id="determinant-of-an-n-times-n-matrix">Determinant of an <span class="arithmatex">\(n \times n\)</span> Matrix</h4>
+<p>To find the determinant of the <span class="arithmatex">\(n \times n\)</span> matrix</p>
+<div class="arithmatex">\[
+A=\left[\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1 n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2 n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n 1} &amp; a_{n 2} &amp; \cdots &amp; a_{n n}
+\end{array}\right]
+\]</div>
+<p>we choose a row or column to expand, and then we calculate the number that is obtained by multiplying each element of that row or column by its cofactor and then adding the resulting products. For example, if we choose to expand about the first row, we get</p>
+<div class="arithmatex">\[
+\operatorname{det}(A)=|A|=a_{11} A_{11}+a_{12} A_{12}+\cdots+a_{1 n} A_{1 n}
+\]</div>
+<h4 id="invertibility-criterion">Invertibility Criterion</h4>
+<p>A square matrix has an inverse if and only if its determinant is not 0 .</p>
+<h4 id="row-and-column-transformations">Row and Column Transformations</h4>
+<p>If we add a nonzero multiple of one row to another row in a square matrix or a nonzero multiple of one column to another column, then the determinant of the matrix is unchanged.</p>
+<h4 id="cramers-rule">Cramer's Rule</h4>
+<p>If a system of <span class="arithmatex">\(n\)</span> linear equations in the <span class="arithmatex">\(n\)</span> variables <span class="arithmatex">\(x_{1}, x_{2}, \ldots, x_{n}\)</span> is equivalent to the matrix equation <span class="arithmatex">\(D X=B\)</span> and if <span class="arithmatex">\(|D| \neq 0\)</span>, then the solutions of the system are</p>
+<div class="arithmatex">\[
+x_{1}=\frac{\left|D_{x_{1}}\right|}{|D|} \quad x_{2}=\frac{\left|D_{x_{2}}\right|}{|D|} \quad \cdots \quad x_{n}=\frac{\left|D_{x_{n}}\right|}{|D|}
+\]</div>
+<p>where <span class="arithmatex">\(D_{x_{i}}\)</span> is the matrix that is obtained from <span class="arithmatex">\(D\)</span> by replacing its <span class="arithmatex">\(i\)</span> th column by the constant matrix <span class="arithmatex">\(B\)</span>.</p>
+<h4 id="area-of-a-triangle-using-determinants">Area of a Triangle Using Determinants</h4>
+<p>If a triangle in the coordinate plane has vertices <span class="arithmatex">\(\left(a_{1}, b_{1}\right),\left(a_{2}, b_{2}\right)\)</span>, and <span class="arithmatex">\(\left(a_{3}, b_{3}\right)\)</span>, then the area of the triangle is given by</p>
+<div class="arithmatex">\[
+\mathscr{A}= \pm \frac{1}{2}\left|\begin{array}{lll}
+a_{1} &amp; b_{1} &amp; 1 \\
+a_{2} &amp; b_{2} &amp; 1 \\
+a_{3} &amp; b_{3} &amp; 1
+\end{array}\right|
+\]</div>
+<p>where the sign is chosen to make the area positive.</p>
+<h4 id="partial-fractions">Partial Fractions</h4>
+<p>The partial fraction decomposition of a rational function</p>
+<div class="arithmatex">\[
+r(x)=\frac{P(x)}{Q(x)}
+\]</div>
+<p>(where the degree of <span class="arithmatex">\(P\)</span> is less than the degree of <span class="arithmatex">\(Q\)</span> ) is a sum of simpler fractional expressions that equal <span class="arithmatex">\(r(x)\)</span> when brought to a common denominator. The denominator of each simpler fraction is either a linear or quadratic factor of <span class="arithmatex">\(Q(x)\)</span> or a power of such a linear or quadratic factor. To find the terms of the partial fraction decomposition, we first factor <span class="arithmatex">\(Q(x)\)</span> into linear and irreducible quadratic factors. The terms then have the following forms, depending on the factors of <span class="arithmatex">\(Q(x)\)</span>.</p>
+<ol>
+<li>For every distinct linear factor <span class="arithmatex">\(a x+b\)</span> there is a term of the form</li>
+</ol>
+<div class="arithmatex">\[
+\frac{A}{a x+b}
+\]</div>
+<ol>
+<li>For every repeated linear factor <span class="arithmatex">\((a x+b)^{m}\)</span> there are terms of the form</li>
+</ol>
+<div class="arithmatex">\[
+\frac{A_{1}}{a x+b}+\frac{A_{2}}{(a x+b)^{2}}+\cdots+\frac{A_{m}}{(a x+b)^{m}}
+\]</div>
+<ol>
+<li>For every distinct quadratic factor <span class="arithmatex">\(a x^{2}+b x+c\)</span> there is a term of the form</li>
+</ol>
+<div class="arithmatex">\[
+\frac{A x+B}{a x^{2}+b x+c}
+\]</div>
+<ol>
+<li>For every repeated quadratic factor <span class="arithmatex">\(\left(a x^{2}+b x+c\right)^{m}\)</span> there are terms of the form</li>
+</ol>
+<div class="arithmatex">\[
+\frac{A_{1} x+B_{1}}{a x^{2}+b x+c}+\frac{A_{2} x+B_{2}}{\left(a x^{2}+b x+c\right)^{2}}+\cdots+\frac{A_{m} x+B_{m}}{\left(a x^{2}+b x+c\right)^{m}}
+\]</div>
+<h4 id="graphing-inequalities">Graphing Inequalities</h4>
+<p>To graph an inequality:</p>
+<ol>
+<li>Graph the equation that corresponds to the inequality. This "boundary curve" divides the coordinate plane into separate regions.</li>
+<li>Use test points to determine which region(s) satisfy the inequality.</li>
+<li>Shade the region(s) that satisfy the inequality, and use a solid line for the boundary curve if it satisfies the inequality ( <span class="arithmatex">\(\leq\)</span> or <span class="arithmatex">\(\geq\)</span> ) and a dashed line if it does not <span class="arithmatex">\((&lt;\)</span> or <span class="arithmatex">\(\rangle\)</span> ).</li>
+</ol>
+<h4 id="graphing-systems-of-inequalities">Graphing Systems of Inequalities</h4>
+<p>To graph the solution of a system of inequalities (or feasible region determined by the inequalities):</p>
+<ol>
+<li>Graph all the inequalities on the same coordinate plane.</li>
+<li>The solution is the intersection of the solutions of all the inequalities, so shade the region that satisfies all the inequalities.</li>
+<li>Determine the coordinates of the intersection points of all the boundary curves that touch the solution set of the system. These points are the vertices of the solution.</li>
+</ol>
+</body>
+</html>

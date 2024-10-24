@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter8_review.md</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body class="markdown-body">
+<h4 id="polar-coordinates">Polar Coordinates</h4>
+<p>In the polar coordinate system the location of a point <span class="arithmatex">\(P\)</span> in the plane is determined by an ordered pair <span class="arithmatex">\((r, \theta)\)</span>, where <span class="arithmatex">\(r\)</span> is the distance from the pole <span class="arithmatex">\(O\)</span> to <span class="arithmatex">\(P\)</span> and <span class="arithmatex">\(\theta\)</span> is the angle formed by the polar axis and the segment <span class="arithmatex">\(\overrightarrow{O P}\)</span>, as shown in the figure.</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2024_09_26_376dbe5a037477977e09g-302.jpg?height=207&amp;width=334&amp;top_left_y=623&amp;top_left_x=500" /></p>
+<h4 id="polar-and-rectangular-coordinates">Polar and Rectangular Coordinates</h4>
+<p>Any point <span class="arithmatex">\(P\)</span> in the plane has polar coordinates <span class="arithmatex">\(P(r, \theta)\)</span> and rectangular coordinates <span class="arithmatex">\(P(x, y)\)</span>, as shown.</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2024_09_26_376dbe5a037477977e09g-302.jpg?height=286&amp;width=449&amp;top_left_y=1034&amp;top_left_x=448" /></p>
+<ul>
+<li>To change from polar to rectangular coordinates, we use the equations</li>
+</ul>
+<div class="arithmatex">\[
+x=r \cos \theta \quad \text { and } \quad y=r \sin \theta
+\]</div>
+<ul>
+<li>To change from rectangular to polar coordinates, we use the equations</li>
+</ul>
+<div class="arithmatex">\[
+r^{2}=x^{2}+y^{2} \quad \text { and } \quad \tan \theta=\frac{y}{x}
+\]</div>
+<h4 id="polar-equations-and-graphs">Polar Equations and Graphs</h4>
+<p>A polar equation is an equation in the variables <span class="arithmatex">\(r\)</span> and <span class="arithmatex">\(\theta\)</span>. The graph of a polar equation <span class="arithmatex">\(r=f(\theta)\)</span> consists of all points <span class="arithmatex">\((r, \theta)\)</span> whose coordinates satisfy the equation.</p>
+<h4 id="symmetry-in-graphs-of-polar-equations">Symmetry in Graphs of Polar Equations</h4>
+<p>The graph of a polar equation is</p>
+<ul>
+<li>symmetric about the polar axis if the equation is unchanged when we replace <span class="arithmatex">\(\theta\)</span> by <span class="arithmatex">\(-\theta\)</span>;</li>
+<li>symmetric about the pole if the equation is unchanged when we replace <span class="arithmatex">\(r\)</span> by <span class="arithmatex">\(-r\)</span>, or <span class="arithmatex">\(\theta\)</span> by <span class="arithmatex">\(\theta+\pi\)</span>.</li>
+<li>symmetric about the vertical line <span class="arithmatex">\(\theta=\pi / 2\)</span> if the equation is unchanged when we replace <span class="arithmatex">\(\theta\)</span> by <span class="arithmatex">\(\pi-\theta\)</span>.</li>
+</ul>
+<h4 id="complex-numbers">Complex Numbers</h4>
+<p>A complex number is a number of the form <span class="arithmatex">\(a+b i\)</span>, where <span class="arithmatex">\(i^{2}=-1\)</span> and where <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> are real numbers. For the complex number <span class="arithmatex">\(z=a+b i, a\)</span> is called the real part and <span class="arithmatex">\(b\)</span> is called the imaginary part. A complex number <span class="arithmatex">\(a+b i\)</span> is graphed in the complex plane as shown.</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2024_09_26_376dbe5a037477977e09g-302.jpg?height=302&amp;width=469&amp;top_left_y=538&amp;top_left_x=1341" /></p>
+<p>The modulus (or absolute value) of a complex number <span class="arithmatex">\(z=a+b i\)</span> is</p>
+<div class="arithmatex">\[
+|z|=\sqrt{a^{2}+b^{2}}
+\]</div>
+<h4 id="polar-form-of-complex-numbers">Polar Form of Complex Numbers</h4>
+<p>A complex number <span class="arithmatex">\(z=a+b i\)</span> has the polar form (or trigonometric form)</p>
+<div class="arithmatex">\[
+z=r(\cos \theta+i \sin \theta)
+\]</div>
+<p>where <span class="arithmatex">\(r=|z|\)</span> and <span class="arithmatex">\(\tan \theta=b / a\)</span>. The number <span class="arithmatex">\(r\)</span> is the modulus of <span class="arithmatex">\(z\)</span> and <span class="arithmatex">\(\theta\)</span> is the argument of <span class="arithmatex">\(z\)</span>.</p>
+<h4 id="multiplication-and-division-of-complex-numbers-in-polar-form">Multiplication and Division of Complex Numbers in Polar Form</h4>
+<p>Suppose the complex numbers <span class="arithmatex">\(z_{1}\)</span> and <span class="arithmatex">\(z_{2}\)</span> have the following polar form:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; z_{1}=r_{1}\left(\cos \theta_{1}+i \sin \theta_{1}\right) \\
+&amp; z_{2}=r_{2}\left(\cos \theta_{2}+i \sin \theta_{2}\right)
+\end{aligned}
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+\begin{aligned}
+z_{1} z_{2} &amp; =r_{1} r_{2}\left[\cos \left(\theta_{1}+\theta_{2}\right)+i \sin \left(\theta_{1}+\theta_{2}\right)\right] \\
+\frac{z_{1}}{z_{2}} &amp; =\frac{r_{1}}{r_{2}}\left[\cos \left(\theta_{1}-\theta_{2}\right)+i \sin \left(\theta_{1}-\theta_{2}\right)\right]
+\end{aligned}
+\]</div>
+<h4 id="de-moivres-theorem">De Moivre's Theorem</h4>
+<p>If <span class="arithmatex">\(z=r(\cos \theta+i \sin \theta)\)</span> is a complex number in polar form and <span class="arithmatex">\(n\)</span> is a positive integer, then</p>
+<div class="arithmatex">\[
+z^{n}=r^{n}(\cos n \theta+i \sin n \theta)
+\]</div>
+<h4 id="nth-roots-of-complex-numbers">nth Roots of Complex Numbers</h4>
+<p>If <span class="arithmatex">\(z=r(\cos \theta+i \sin \theta)\)</span> is a complex number in polar form and <span class="arithmatex">\(n\)</span> is a positive integer, then <span class="arithmatex">\(z\)</span> has the <span class="arithmatex">\(n\)</span> distinct <span class="arithmatex">\(n\)</span>th roots <span class="arithmatex">\(w_{0}, w_{1}, \ldots, w_{n-1}\)</span>, where</p>
+<div class="arithmatex">\[
+w_{k}=r^{1 / n}\left[\cos \left(\frac{\theta+2 k \pi}{n}\right)+i \sin \left(\frac{\theta+2 k \pi}{n}\right)\right]
+\]</div>
+<p>where <span class="arithmatex">\(k=0,1,2, \ldots, n-1\)</span>.</p>
+<h4 id="finding-the-nth-roots-of-z">Finding the <span class="arithmatex">\(n\)</span>th Roots of <span class="arithmatex">\(z\)</span></h4>
+<p>To find the <span class="arithmatex">\(n\)</span>th roots of <span class="arithmatex">\(z=r(\cos \theta+i \sin \theta)\)</span>, we use the following observations:</p>
+<ol>
+<li>The modulus of each <span class="arithmatex">\(n\)</span>th root is <span class="arithmatex">\(r^{1 / n}\)</span>.</li>
+<li>The argument of the first root <span class="arithmatex">\(w_{0}\)</span> is <span class="arithmatex">\(\theta / n\)</span>.</li>
+<li>Repeatedly add <span class="arithmatex">\(2 \pi / n\)</span> to get the argument of each successive root.</li>
+</ol>
+<h4 id="parametric-equations">Parametric Equations</h4>
+<p>If <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> are functions defined on an interval <span class="arithmatex">\(I\)</span>, then the set of points <span class="arithmatex">\((f(t), g(t))\)</span> is a plane curve. The equations</p>
+<div class="arithmatex">\[
+x=f(t) \quad y=g(t)
+\]</div>
+<p>where <span class="arithmatex">\(t \in I\)</span>, are parametric equations for the curve, with parameter <span class="arithmatex">\(t\)</span>.</p>
+<h4 id="polar-equations-in-parametric-form">Polar Equations in Parametric Form</h4>
+<p>The graph of the polar equation <span class="arithmatex">\(r=f(\theta)\)</span> is the same as the graph of the parametric equations</p>
+<div class="arithmatex">\[
+x=f(t) \cos t \quad y=f(t) \sin t
+\]</div>
+<h4 id="vectors">Vectors</h4>
+<p>A vector is a quantity with both magnitude and direction. A vector in the coordinate plane is expressed in terms of two coordinates or components</p>
+<div class="arithmatex">\[
+\mathbf{v}=\left\langle a_{1}, a_{2}\right\rangle
+\]</div>
+<p>If a vector <span class="arithmatex">\(\mathbf{v}\)</span> has its initial point at <span class="arithmatex">\(P\left(x_{1}, y_{1}\right)\)</span> and its terminal point at <span class="arithmatex">\(Q\left(x_{2}, y_{2}\right)\)</span>, then</p>
+<div class="arithmatex">\[
+\mathbf{v}=\left\langle x_{2}-x_{1}, y_{2}-y_{1}\right\rangle
+\]</div>
+<p>Let <span class="arithmatex">\(\mathbf{u}=\left\langle a_{1}, a_{2}\right\rangle, \mathbf{v}=\left\langle b_{1}, b_{2}\right\rangle\)</span>, and <span class="arithmatex">\(c \in \mathbb{R}\)</span>. The operations on vectors are defined as follows.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\mathbf{u}+\mathbf{v} &amp; =\left\langle a_{1}+b_{1}, a_{2}+b_{2}\right\rangle &amp; &amp; \text { Addition } \\
+\mathbf{u}-\mathbf{v} &amp; =\left\langle a_{1}-b_{1}, a_{2}-b_{2}\right\rangle &amp; &amp; \text { Subtraction } \\
+c \mathbf{u} &amp; =\left\langle c a_{1}, c a_{2}\right\rangle &amp; &amp; \text { Scalar multiplication }
+\end{aligned}
+\]</div>
+<p>The unit vectors <span class="arithmatex">\(\mathbf{i}\)</span> and <span class="arithmatex">\(\mathbf{j}\)</span> are defined by</p>
+<div class="arithmatex">\[
+\mathbf{i}=\langle 1,0\rangle \quad \mathbf{j}=\langle 0,1\rangle
+\]</div>
+<p>Any vector <span class="arithmatex">\(\mathbf{v}=\left\langle a_{1}, a_{2}\right\rangle\)</span> can be expressed as</p>
+<div class="arithmatex">\[
+\mathbf{v}=a_{1} \mathbf{i}+a_{2} \mathbf{j}
+\]</div>
+</body>
+</html>

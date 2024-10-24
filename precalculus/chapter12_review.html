@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter12_review.md</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body class="markdown-body">
+<h4 id="limits">Limits</h4>
+<p>We say that the limit of a function <span class="arithmatex">\(f\)</span>, as <span class="arithmatex">\(x\)</span> approaches <span class="arithmatex">\(a\)</span>, equals <span class="arithmatex">\(L\)</span>, and we write</p>
+<div class="arithmatex">\[
+\lim _{x \rightarrow a} f(x)=L
+\]</div>
+<p>provided that the values of <span class="arithmatex">\(f(x)\)</span> can be made arbitrarily close to <span class="arithmatex">\(L\)</span> by taking <span class="arithmatex">\(x\)</span> to be sufficiently close to <span class="arithmatex">\(a\)</span>.
+The left-hand and right-hand limits of <span class="arithmatex">\(f\)</span>, as <span class="arithmatex">\(x\)</span> approaches <span class="arithmatex">\(a\)</span>, are defined similarly:</p>
+<div class="arithmatex">\[
+\lim _{x \rightarrow a^{-}} f(x)=L \quad \lim _{x \rightarrow a^{+}} f(x)=L
+\]</div>
+<p>The limit of <span class="arithmatex">\(f\)</span>, as <span class="arithmatex">\(x\)</span> approaches <span class="arithmatex">\(a\)</span>, exists if and only if both leftand right-hand limits exist: <span class="arithmatex">\(\lim _{x \rightarrow a} f(x)=L\)</span> if and only if <span class="arithmatex">\(\lim _{x \rightarrow a^{-}} f(x)=L\)</span> and <span class="arithmatex">\(\lim _{x \rightarrow a^{+}} f(x)=L\)</span>.</p>
+<h4 id="algebraic-properties-of-limits">Algebraic Properties of Limits</h4>
+<p>The following Limit Laws hold.</p>
+<ol>
+<li><span class="arithmatex">\(\lim _{x \rightarrow a}[f(x)+g(x)]=\lim _{x \rightarrow a} f(x)+\lim _{x \rightarrow a} g(x)\)</span></li>
+<li><span class="arithmatex">\(\lim _{x \rightarrow a}[f(x)-g(x)]=\lim _{x \rightarrow a} f(x)-\lim _{x \rightarrow a} g(x)\)</span></li>
+<li><span class="arithmatex">\(\lim _{x \rightarrow a} c f(x)=c \lim _{x \rightarrow a} f(x)\)</span></li>
+<li><span class="arithmatex">\(\lim _{x \rightarrow a}[f(x) g(x)]=\lim _{x \rightarrow a} f(x) \cdot \lim _{x \rightarrow a} g(x)\)</span></li>
+<li><span class="arithmatex">\(\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\frac{\lim _{x \rightarrow a} f(x)}{\lim _{x \rightarrow a} g(x)}, \quad\)</span> if <span class="arithmatex">\(\lim _{x \rightarrow a} g(x) \neq 0\)</span></li>
+<li><span class="arithmatex">\(\lim _{x \rightarrow a}[f(x)]^{n}=\left[\lim _{x \rightarrow a} f(x)\right]^{n}\)</span></li>
+<li><span class="arithmatex">\(\lim _{x \rightarrow a} \sqrt[n]{f(x)}=\sqrt[n]{\lim _{x \rightarrow a} f(x)}\)</span>
+The following special limits hold.</li>
+<li><span class="arithmatex">\(\lim _{x \rightarrow a} c=c\)</span></li>
+<li><span class="arithmatex">\(\lim _{x \rightarrow a} x=a\)</span></li>
+<li><span class="arithmatex">\(\lim _{x \rightarrow a} x^{n}=a^{n}\)</span></li>
+<li><span class="arithmatex">\(\lim _{x \rightarrow a} \sqrt[n]{x}=\sqrt[n]{a}\)</span></li>
+</ol>
+<p>If <span class="arithmatex">\(f\)</span> is a polynomial or a rational function and <span class="arithmatex">\(a\)</span> is in the domain of <span class="arithmatex">\(f\)</span>, then <span class="arithmatex">\(\lim _{x \rightarrow a} f(x)=f(a)\)</span>.</p>
+<h4 id="derivatives">Derivatives</h4>
+<p>Let <span class="arithmatex">\(y=f(x)\)</span> be a function. The derivative of <span class="arithmatex">\(\boldsymbol{f}\)</span> at <span class="arithmatex">\(\boldsymbol{a}\)</span>, denoted by <span class="arithmatex">\(f^{\prime}(a)\)</span>, is</p>
+<div class="arithmatex">\[
+f^{\prime}(a)=\lim _{h \rightarrow 0} \frac{f(x+h)-f(x)}{h}
+\]</div>
+<p>Equivalently, the derivative <span class="arithmatex">\(f^{\prime}(a)\)</span> is</p>
+<div class="arithmatex">\[
+f^{\prime}(a)=\lim _{x \rightarrow a} \frac{f(x)-f(a)}{x-a}
+\]</div>
+<p>The derivative of <span class="arithmatex">\(f\)</span> at <span class="arithmatex">\(a\)</span> is the slope of the tangent line to the curve <span class="arithmatex">\(y=f(x)\)</span> at the point <span class="arithmatex">\(P(a, f(a))\)</span>.</p>
+<p>The derivative of <span class="arithmatex">\(f\)</span> at <span class="arithmatex">\(a\)</span> is the instantaneous rate of change of <span class="arithmatex">\(\boldsymbol{y}\)</span> with respect to <span class="arithmatex">\(x\)</span> at <span class="arithmatex">\(x=a\)</span>.</p>
+<h4 id="limits-at-infinity">Limits at Infinity</h4>
+<p>We say that the limit of a function <span class="arithmatex">\(f\)</span>, as <span class="arithmatex">\(x\)</span> approaches infinity, is <span class="arithmatex">\(L\)</span>, and write</p>
+<div class="arithmatex">\[
+\lim _{x \rightarrow \infty} f(x)=L
+\]</div>
+<p>provided that the values of <span class="arithmatex">\(f(x)\)</span> can be made arbitrarily close to <span class="arithmatex">\(L\)</span> by taking <span class="arithmatex">\(x\)</span> sufficiently large.</p>
+<p>We say that the limit of a function <span class="arithmatex">\(f\)</span>, as <span class="arithmatex">\(x\)</span> approaches negative infinity, is <span class="arithmatex">\(L\)</span>, and we write</p>
+<div class="arithmatex">\[
+\lim _{x \rightarrow-\infty} f(x)=L
+\]</div>
+<p>provided that the values of <span class="arithmatex">\(f(x)\)</span> can be made arbitrarily close to <span class="arithmatex">\(L\)</span> by taking <span class="arithmatex">\(x\)</span> sufficiently large negative.
+The line <span class="arithmatex">\(y=L\)</span> is a horizontal asymptote of the curve <span class="arithmatex">\(y=f(x)\)</span> if either</p>
+<div class="arithmatex">\[
+\lim _{x \rightarrow \infty} f(x)=L \quad \text { or } \quad \lim _{x \rightarrow-\infty} f(x)=L
+\]</div>
+<p>The following special limits hold, where <span class="arithmatex">\(k&gt;0\)</span> :</p>
+<div class="arithmatex">\[
+\lim _{x \rightarrow \infty} \frac{1}{x^{k}}=0 \quad \text { and } \quad \lim _{x \rightarrow-\infty} \frac{1}{x^{k}}=0
+\]</div>
+<h4 id="limits-of-sequences">Limits of Sequences</h4>
+<p>We say that a sequence <span class="arithmatex">\(a_{1}, a_{2}, a_{3}, \ldots\)</span> has the limit <span class="arithmatex">\(L\)</span>, and we write</p>
+<div class="arithmatex">\[
+\lim _{n \rightarrow \infty} a_{n}=L
+\]</div>
+<p>provided that the <span class="arithmatex">\(n\)</span>th term <span class="arithmatex">\(a_{n}\)</span> of the sequence can be made arbitrarily close to <span class="arithmatex">\(L\)</span> by taking <span class="arithmatex">\(n\)</span> sufficiently large.</p>
+<p>If <span class="arithmatex">\(\lim _{x \rightarrow \infty} f(x)=L\)</span> and if <span class="arithmatex">\(f(n)=a_{n}\)</span> when <span class="arithmatex">\(n\)</span> is an integer, then <span class="arithmatex">\(\lim _{n \rightarrow \infty} a_{n}=L\)</span>.</p>
+<h4 id="area">Area</h4>
+<p>Let <span class="arithmatex">\(f\)</span> be a continuous function defined on the interval <span class="arithmatex">\([a, b]\)</span>. The area <span class="arithmatex">\(A\)</span> of the region that lies under the graph of <span class="arithmatex">\(f\)</span> is the limit of the sum of the areas of approximating rectangles:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A &amp; =\lim _{n \rightarrow \infty}\left[f\left(x_{1}\right) \Delta x+f\left(x_{2}\right) \Delta x+\cdots+f\left(x_{n}\right) \Delta x\right] \\
+&amp; =\lim _{n \rightarrow \infty} \sum_{k=1}^{n} f\left(x_{k}\right) \Delta x
+\end{aligned}
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+\Delta x=\frac{b-a}{n} \quad \text { and } \quad x_{k}=a+k \Delta x
+\]</div>
+<h4 id="summation-formulas">Summation Formulas</h4>
+<p>The following summation formulas are useful for calculating areas.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\sum_{k=1}^{n} c &amp; =n c &amp; \sum_{k=1}^{n} k &amp; =\frac{n(n+1)}{2} \\
+\sum_{k=1}^{n} k^{2} &amp; =\frac{n(n+1)(2 n+1)}{6} &amp; \sum_{k=1}^{n} k^{3} &amp; =\frac{n^{2}(n+1)^{2}}{4}
+\end{aligned}
+\]</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+# macOS系统文件
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 资源库文件
+Icon?
+._*
+
+# Xcode生成文件
+build/
+DerivedData/
+*.xcuserstate
+*.xcworkspace
+*.xcuserdata/
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# 其他
+*.swp           # vim swap files
+*.lock          # lock files
+*.log           # log files
+*.tmp           # temporary files
+*.tmp.*         # temporary files with a dot
+*.orig          # original files
+*.sublime-workspace
+*.sublime-project
+
+# 个人配置文件
+*.env           # 环境变量文件
+*.sublime-project
+*.code-workspace
+
+# 其他IDE
+.idea/          # JetBrains IDE files
+.vscode/        # Visual Studio Code files
+
+# 临时文件
+*.bak           # backup files
+*.~*            # backup files

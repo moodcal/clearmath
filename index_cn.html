@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <title>ClearMath - 让数学概念清晰</title>
+    <style>
+        /* 现代化的 CSS 样式 */
+        :root {
+            --primary-color: #1E88E5;
+            --secondary-color: #FFC107;
+            --text-color: #333;
+            --background-color: #F5F5F5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-content {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: right;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .tagline {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #FFD54F;
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .screenshot-section {
+            margin: 60px 0;
+        }
+        
+       .screenshot-grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+           gap: 20px;
+       }
+       .screenshot img {
+           width: 100%;
+           height: auto;
+           border-radius: 10px;
+           box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+           transition: transform 0.3s ease;
+       }
+       .screenshot img:hover {
+           transform: scale(1.05);
+       }
+            
+        .screenshot {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        
+        .testimonial {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            margin: 60px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+               flex-direction: column;
+            }
+            .screenshot-grid {
+               grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="container hero">
+        <div class="hero-content">
+            <h1>数学概念</h1>
+            <p class="tagline">照亮数学概念的新途径</p>
+            <a href="https://apps.apple.com/app/6670290377" class="cta-button">立即下载</a>
+        </div>
+        <!-- <div class="hero-image">
+            <img src="images/logo.png" alt="数学概念应用 Logo" width="100">
+        </div> -->
+    </div>
+</header>
+
+<main class="container">
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🗺️</div>
+            <h3>概念关系图</h3>
+            <p>可视化数学概念之间的联系，理解概念如何相互关联。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>全面的概念解释</h3>
+            <p>深入理解每个概念，超越公式，掌握基本原理。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🛤️</div>
+            <h3>引导式学习路径</h3>
+            <p>遵循结构化的路径，系统地从基础到高级主题构建知识。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>进度跟踪</h3>
+            <p>标记已学习的概念，监控不同数学领域的进展。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⭐</div>
+            <h3>收藏系统</h3>
+            <p>创建关键概念的个人收藏，方便复习和快速访问。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">✍️</div>
+            <h3>实践问题与示例</h3>
+            <p>通过强化概念理解的问题，在实际情境中应用知识。</p>
+        </div>
+    </section>
+
+    <section class="screenshot-section">
+        <h2>体验数学概念</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot">
+                <img src="images/zh/card1.png" alt="概念卡片 1">
+            </div>
+            <div class="screenshot">
+                <img src="images/zh/card2.png" alt="概念卡片 2">
+            </div>
+            <div class="screenshot">
+                <img src="images/zh/card3.png" alt="概念卡片 3">
+            </div>
+            <div class="screenshot">
+                <img src="images/zh/detail.png" alt="概念详情">
+            </div>
+            <div class="screenshot">
+                <img src="images/zh/path.png" alt="学习路径">
+            </div>
+            <div class="screenshot">
+                <img src="images/zh/favorite.png" alt="收藏">
+            </div>
+            <div class="screenshot">
+                <img src="images/zh/similar.png" alt="关联概念">
+            </div>
+            <div class="screenshot">
+                <img src="images/zh/relation.png" alt="关联概念">
+            </div>
+            <div class="screenshot">
+                <img src="images/zh/grade.png" alt="所有年级">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <h2>用户评价</h2>
+        <blockquote>
+            "数学概念彻底改变了我对数学的理解。概念图和引导式学习路径帮助我看到了更大的图景，发现了以前从未注意到的联系。"
+        </blockquote>
+        <p>- 小明，高中生</p>
+    </section>
+</main>
+
+
+    <footer>
+        <div class="container">
+            <p>苏ICP备2023029114号-2A</p>
+        </div>
+    </footer>
+</body>
+</html>

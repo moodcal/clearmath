@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter3_review.md</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body class="markdown-body">
+<h4 id="quadratic-functions">Quadratic Functions</h4>
+<p>A quadratic function is a function of the form</p>
+<div class="arithmatex">\[
+f(x)=a x^{2}+b x+c
+\]</div>
+<p>It can be expressed in the vertex form</p>
+<div class="arithmatex">\[
+f(x)=a(x-h)^{2}+k
+\]</div>
+<p>by completing the square.
+The graph of a quadratic function in the vertex form is a parabola with vertex <span class="arithmatex">\((h, k)\)</span>.
+If <span class="arithmatex">\(a&gt;0\)</span>, then the quadratic function <span class="arithmatex">\(f\)</span> has the minimum value <span class="arithmatex">\(k\)</span> at <span class="arithmatex">\(x=h=-b /(2 a)\)</span>.
+If <span class="arithmatex">\(a&lt;0\)</span>, then the quadratic function <span class="arithmatex">\(f\)</span> has the maximum value <span class="arithmatex">\(k\)</span> at <span class="arithmatex">\(x=h=-b /(2 a)\)</span>.</p>
+<p>Polynomial Functions | Section 3.2
+A polynomial function of degree <span class="arithmatex">\(n\)</span> is a function <span class="arithmatex">\(P\)</span> of the form</p>
+<div class="arithmatex">\[
+P(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\cdots+a_{1} x+a_{0}
+\]</div>
+<p>(where <span class="arithmatex">\(a_{n} \neq 0\)</span> ). The numbers <span class="arithmatex">\(a_{i}\)</span> are the coefficients of the polynomial; <span class="arithmatex">\(a_{n}\)</span> is the leading coefficient, and <span class="arithmatex">\(a_{0}\)</span> is the constant coefficient (or constant term).</p>
+<p>The graph of a polynomial function is a smooth, continuous curve.</p>
+<h4 id="real-zeros-of-polynomials">Real Zeros of Polynomials</h4>
+<p>A zero of a polynomial <span class="arithmatex">\(P\)</span> is a number <span class="arithmatex">\(c\)</span> for which <span class="arithmatex">\(P(c)=0\)</span>. The following are equivalent ways of describing real zeros of polynomials:</p>
+<ol>
+<li><span class="arithmatex">\(c\)</span> is a real zero of <span class="arithmatex">\(P\)</span>.</li>
+<li><span class="arithmatex">\(x=c\)</span> is a solution of the equation <span class="arithmatex">\(P(x)=0\)</span>.</li>
+<li><span class="arithmatex">\(x-c\)</span> is a factor of <span class="arithmatex">\(P(x)\)</span>.</li>
+<li><span class="arithmatex">\(c\)</span> is an <span class="arithmatex">\(x\)</span>-intercept of the graph of <span class="arithmatex">\(P\)</span>.</li>
+</ol>
+<h4 id="multiplicity-of-a-zero">Multiplicity of a Zero</h4>
+<p>A zero <span class="arithmatex">\(c\)</span> of a polynomial <span class="arithmatex">\(P\)</span> has multiplicity <span class="arithmatex">\(m\)</span> if <span class="arithmatex">\(m\)</span> is the highest power for which <span class="arithmatex">\((x-c)^{m}\)</span> is a factor of <span class="arithmatex">\(P(x)\)</span>.</p>
+<h4 id="local-maximums-and-minimums">Local Maximums and Minimums</h4>
+<p>A polynomial function <span class="arithmatex">\(P\)</span> of degree <span class="arithmatex">\(n\)</span> has <span class="arithmatex">\(n-1\)</span> or fewer local extrema (i.e., local maximums and minimums).</p>
+<h4 id="division-of-polynomials">Division of Polynomials</h4>
+<p>If <span class="arithmatex">\(P\)</span> and <span class="arithmatex">\(D\)</span> are any polynomials [with <span class="arithmatex">\(D(x) \neq 0\)</span> ], then we can divide <span class="arithmatex">\(P\)</span> by <span class="arithmatex">\(D\)</span> using either long division or synthetic division. The result of the division can be expressed in either of the following equivalent forms:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P(x) &amp; =D(x) \cdot Q(x)+R(x) \\
+\frac{P(x)}{D(x)} &amp; =Q(x)+\frac{R(x)}{D(x)}
+\end{aligned}
+\]</div>
+<p>In this division, <span class="arithmatex">\(P\)</span> is the dividend, <span class="arithmatex">\(D\)</span> is the divisor, <span class="arithmatex">\(Q\)</span> is the quotient, and <span class="arithmatex">\(R\)</span> is the remainder. When the division is continued to its completion, the degree of <span class="arithmatex">\(R\)</span> is less than the degree of <span class="arithmatex">\(D[\)</span> or <span class="arithmatex">\(R(x)=0]\)</span>.</p>
+<h4 id="remainder-theorem">Remainder Theorem</h4>
+<p>When <span class="arithmatex">\(P(x)\)</span> is divided by the linear divisor <span class="arithmatex">\(D(x)=x-c\)</span>, the remainder is the constant <span class="arithmatex">\(P(c)\)</span>. So one way to evaluate a polynomial function <span class="arithmatex">\(P\)</span> at <span class="arithmatex">\(c\)</span> is to use synthetic division to divide <span class="arithmatex">\(P(x)\)</span> by <span class="arithmatex">\(x-c\)</span> and observe the value of the remainder.</p>
+<h4 id="rational-zeros-of-polynomials">Rational Zeros of Polynomials</h4>
+<p>If the polynomial <span class="arithmatex">\(P\)</span> given by</p>
+<div class="arithmatex">\[
+P(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\cdots+a_{1} x+a_{0}
+\]</div>
+<p>has integer coefficients, then all the rational zeros of <span class="arithmatex">\(P\)</span> have the form</p>
+<div class="arithmatex">\[
+x= \pm \frac{p}{q}
+\]</div>
+<p>where <span class="arithmatex">\(p\)</span> is a divisor of the constant term <span class="arithmatex">\(a_{0}\)</span> and <span class="arithmatex">\(q\)</span> is a divisor of the leading coefficient <span class="arithmatex">\(a_{n}\)</span>.
+So to find all the rational zeros of a polynomial, we list all the possible rational zeros given by this principle and then check to see which are actual zeros by using synthetic division.</p>
+<h4 id="descartess-rule-of-signs">Descartes's Rule of Signs</h4>
+<p>Let <span class="arithmatex">\(P\)</span> be a polynomial with real coefficients. Then:
+The number of positive real zeros of <span class="arithmatex">\(P\)</span> either is the number of changes of sign in the coefficients of <span class="arithmatex">\(P(x)\)</span> or is less than that by an even number.
+The number of negative real zeros of <span class="arithmatex">\(P\)</span> either is the number of changes of sign in the coefficients of <span class="arithmatex">\(P(-x)\)</span> or is less than that by an even number.</p>
+<h4 id="upper-and-lower-bounds-theorem">Upper and Lower Bounds Theorem</h4>
+<p>Suppose we divide the polynomial <span class="arithmatex">\(P\)</span> by the linear expression <span class="arithmatex">\(x-c\)</span> and arrive at the result</p>
+<div class="arithmatex">\[
+P(x)=(x-c) \cdot Q(x)+r
+\]</div>
+<p>If <span class="arithmatex">\(c&gt;0\)</span> and the coefficients of <span class="arithmatex">\(Q\)</span>, followed by <span class="arithmatex">\(r\)</span>, are all nonnegative, then <span class="arithmatex">\(c\)</span> is an upper bound for the zeros of <span class="arithmatex">\(P\)</span>.</p>
+<p>If <span class="arithmatex">\(c&lt;0\)</span> and the coefficients of <span class="arithmatex">\(Q\)</span>, followed by <span class="arithmatex">\(r\)</span> (including zero coefficients), are alternately nonnegative and nonpositive, then <span class="arithmatex">\(c\)</span> is a lower bound for the zeros of <span class="arithmatex">\(P\)</span>.</p>
+<h4 id="the-fundamental-theorem-of-algebra-complete-factorization-and-the-zeros-theorem">The Fundamental Theorem of Algebra, Complete Factorization, and the Zeros Theorem</h4>
+<p>Every polynomial <span class="arithmatex">\(P\)</span> of degree <span class="arithmatex">\(n\)</span> with complex coefficients has exactly <span class="arithmatex">\(n\)</span> complex zeros, provided that each zero of multiplicity <span class="arithmatex">\(m\)</span> is counted <span class="arithmatex">\(m\)</span> times. <span class="arithmatex">\(P\)</span> factors into <span class="arithmatex">\(n\)</span> linear factors as follows:</p>
+<div class="arithmatex">\[
+P(x)=a\left(x-c_{1}\right)\left(x-c_{2}\right) \cdots\left(x-c_{n}\right)
+\]</div>
+<p>where <span class="arithmatex">\(a\)</span> is the leading coefficient of <span class="arithmatex">\(P\)</span> and <span class="arithmatex">\(c_{1}, c_{1}, \ldots, c_{n}\)</span> are the zeros of <span class="arithmatex">\(P\)</span>.</p>
+<h4 id="conjugate-zeros-theorem">Conjugate Zeros Theorem</h4>
+<p>If the polynomial <span class="arithmatex">\(P\)</span> has real coefficients and if <span class="arithmatex">\(a+b i\)</span> is a zero of <span class="arithmatex">\(P\)</span>, then its complex conjugate <span class="arithmatex">\(a-b i\)</span> is also a zero of <span class="arithmatex">\(P\)</span>.</p>
+<h4 id="linear-and-quadratic-factors-theorem">Linear and Quadratic Factors Theorem</h4>
+<p>Every polynomial with real coefficients can be factored into linear and irreducible quadratic factors with real coefficients.</p>
+<h4 id="rational-functions">Rational Functions</h4>
+<p>A rational function <span class="arithmatex">\(r\)</span> is a quotient of polynomial functions:</p>
+<div class="arithmatex">\[
+r(x)=\frac{P(x)}{Q(x)}
+\]</div>
+<p>We generally assume that the polynomials <span class="arithmatex">\(P\)</span> and <span class="arithmatex">\(Q\)</span> have no factors in common.</p>
+<h4 id="asymptotes">Asymptotes</h4>
+<p>The line <span class="arithmatex">\(x=a\)</span> is a vertical asymptote of the function <span class="arithmatex">\(y=f(x)\)</span> if</p>
+<div class="arithmatex">\[
+y \rightarrow \infty \quad \text { or } \quad y \rightarrow-\infty \quad \text { as } \quad x \rightarrow a^{+} \quad \text { or } \quad x \rightarrow a^{-}
+\]</div>
+<p>The line <span class="arithmatex">\(y=b\)</span> is a horizontal asymptote of the function <span class="arithmatex">\(y=f(x)\)</span> if</p>
+<div class="arithmatex">\[
+y \rightarrow b \quad \text { as } \quad x \rightarrow \infty \quad \text { or } \quad x \rightarrow-\infty
+\]</div>
+<h4 id="asymptotes-of-rational-functions">Asymptotes of Rational Functions</h4>
+<p>Let <span class="arithmatex">\(r(x)=\frac{P(x)}{Q(x)}\)</span> be a rational function.
+(continued)</p>
+<p>The vertical asymptotes of <span class="arithmatex">\(r\)</span> are the lines <span class="arithmatex">\(x=a\)</span> where <span class="arithmatex">\(a\)</span> is a zero of <span class="arithmatex">\(Q\)</span>.
+If the degree of <span class="arithmatex">\(P\)</span> is less than the degree of <span class="arithmatex">\(Q\)</span>, then the horizontal asymptote of <span class="arithmatex">\(r\)</span> is the line <span class="arithmatex">\(y=0\)</span>.</p>
+<p>If the degrees of <span class="arithmatex">\(P\)</span> and <span class="arithmatex">\(Q\)</span> are the same, then the horizontal asymptote of <span class="arithmatex">\(r\)</span> is the line <span class="arithmatex">\(y=b\)</span>, where</p>
+<div class="arithmatex">\[
+b=\frac{\text { leading coefficient of } P}{\text { leading coefficient of } Q}
+\]</div>
+<p>If the degree of <span class="arithmatex">\(P\)</span> is greater than the degree of <span class="arithmatex">\(Q\)</span>, then <span class="arithmatex">\(r\)</span> has no horizontal asymptote.</p>
+<h4 id="polynomial-and-rational-inequalities">Polynomial and Rational Inequalities</h4>
+<p>A polynomial inequality is an inequality of the form <span class="arithmatex">\(P(x) \geq 0\)</span>, where <span class="arithmatex">\(P\)</span> is a polynomial. We solve <span class="arithmatex">\(P(x) \geq 0\)</span> by finding the zeros of <span class="arithmatex">\(P\)</span> and using test values between successive zeros to determine the intervals that satisfy the inequality.
+A rational inequality is an inequality of the form <span class="arithmatex">\(r(x) \geq 0\)</span>, where</p>
+<div class="arithmatex">\[
+r(x)=\frac{P(x)}{Q(x)}
+\]</div>
+<p>is a rational function. The cut points of <span class="arithmatex">\(r\)</span> are the values of <span class="arithmatex">\(x\)</span> at which either <span class="arithmatex">\(P(x)=0\)</span> or <span class="arithmatex">\(Q(x)=0\)</span>. We solve <span class="arithmatex">\(r(x) \geq 0\)</span> by using test points between successive cut points to determine the intervals that satisfy the inequality.</p>
+</body>
+</html>
