@@ -275,7 +275,7 @@
         }
 
         .testimonial-text::before {
-            content: """;
+            content: '"';
             font-size: 60px;
             color: rgba(77, 157, 224, 0.2);
             position: absolute;
@@ -428,15 +428,31 @@
         }
 
         /* Language Specific Styles */
-        [lang="en"] .zh {
-            display: none;
+        body[lang="en"] .zh {
+            display: none !important;
         }
 
-        [lang="zh"] .en {
-            display: none;
+        body[lang="zh"] .en {
+            display: none !important;
         }
 
-        /* Responsive Styles */
+        /* App Screenshots */
+        .screenshots {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .screenshots img {
+            width: calc(33.333% - 14px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            object-fit: cover;
+            height: auto;
+        }
+
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
@@ -469,6 +485,17 @@
 
             .footer-container {
                 grid-template-columns: 1fr;
+            }
+
+            .screenshots {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .screenshots img {
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 20px;
             }
         }
 
@@ -504,7 +531,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="https://placehold.co/100x100" alt="PhotoBook Logo">
+                <img src="photobook.png" alt="PhotoBook Logo">
                 <h1 class="en">PhotoBook</h1>
                 <h1 class="zh">宝宝成长记录</h1>
             </div>
@@ -533,11 +560,20 @@
             <p class="en">A privacy-focused app designed to help parents document and cherish their baby's journey from day one.</p>
             <p class="zh">一款注重隐私的应用，帮助父母记录和珍藏宝宝从出生开始的成长历程。</p>
             <div class="app-badges">
-                <a href="#download">
+                <a href="https://apps.apple.com/app/id6742973454">
                     <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on App Store" class="app-badge">
                 </a>
             </div>
-            <img src="https://placehold.co/800x500" alt="PhotoBook App Screenshot" class="app-screenshot">
+            <div class="screenshots en">
+                <img src="en/1.jpg" alt="PhotoBook App Screenshot 1">
+                <img src="en/2.jpg" alt="PhotoBook App Screenshot 2">
+                <img src="en/3.jpg" alt="PhotoBook App Screenshot 3">
+            </div>
+            <div class="screenshots zh">
+                <img src="cn/1.jpg" alt="PhotoBook App Screenshot 1">
+                <img src="cn/2.jpg" alt="PhotoBook App Screenshot 2">
+                <img src="cn/3.jpg" alt="PhotoBook App Screenshot 3">
+            </div>
         </div>
     </section>
 
@@ -681,7 +717,7 @@
             <p class="en">Download PhotoBook now and create a beautiful, private collection of your baby's most precious moments.</p>
             <p class="zh">立即下载 PhotoBook，创建一个美丽、私密的宝宝珍贵瞬间集合。</p>
             <div class="app-badges">
-                <a href="#">
+                <a href="https://apps.apple.com/app/id6742973454">
                     <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on App Store" class="app-badge">
                 </a>
             </div>
@@ -721,10 +757,10 @@
                     <h4 class="en">Legal</h4>
                     <h4 class="zh">法律条款</h4>
                     <ul>
-                        <li><a href="/privacy-policy.html" class="en">Privacy Policy</a></li>
-                        <li><a href="/privacy-policy.html" class="zh">隐私政策</a></li>
-                        <li><a href="/terms-of-use.html" class="en">Terms of Use</a></li>
-                        <li><a href="/terms-of-use.html" class="zh">使用条款</a></li>
+                        <li><a href="en/privacy-policy.html" class="en">Privacy Policy</a></li>
+                        <li><a href="cn/privacy-policy.html" class="zh">隐私政策</a></li>
+                        <li><a href="en/terms-of-use.html" class="en">Terms of Use</a></li>
+                        <li><a href="cn/terms-of-use.html" class="zh">使用条款</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -745,14 +781,20 @@
     <script>
         // Language toggle
         function toggleLanguage() {
-            const currentLang = document.body.getAttribute('lang');
-            if (currentLang === 'en') {
-                document.body.setAttribute('lang', 'zh');
-                localStorage.setItem('preferredLanguage', 'zh');
-            } else {
-                document.body.setAttribute('lang', 'en');
-                localStorage.setItem('preferredLanguage', 'en');
-            }
+            const body = document.body;
+            const currentLang = body.getAttribute('lang');
+            const newLang = currentLang === 'en' ? 'zh' : 'en';
+            
+            // Update language attribute
+            body.setAttribute('lang', newLang);
+            
+            // Store preference
+            localStorage.setItem('preferredLanguage', newLang);
+
+            // Force a repaint to ensure visibility changes take effect
+            body.style.display = 'none';
+            body.offsetHeight; // Force a reflow
+            body.style.display = '';
         }
 
         // Mobile menu toggle
