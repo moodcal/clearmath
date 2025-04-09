@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoBook - Privacy-focused Baby Growth Record App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4D9DE0;
+            --secondary-color: #E56B6F;
+            --accent-color: #EAAC8B;
+            --light-color: #F8F9FA;
+            --dark-color: #212529;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .language-toggle {
+            background: var(--light-color);
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 140px 0 80px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .app-screenshot {
+            max-width: 80%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            margin: 40px auto;
+            display: block;
+        }
+
+        .app-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .app-badge {
+            height: 50px;
+            transition: transform 0.3s;
+        }
+
+        .app-badge:hover {
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 60px;
+            color: var(--dark-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            height: 70px;
+            width: 70px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(77, 157, 224, 0.1);
+            border-radius: 50%;
+        }
+
+        .feature-icon i {
+            font-size: 30px;
+            color: var(--primary-color);
+        }
+
+        .feature-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .feature-description {
+            color: #6c757d;
+            font-size: 16px;
+        }
+
+        /* Privacy Section */
+        .privacy {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .privacy-badge {
+            display: inline-block;
+            background-color: rgba(77, 157, 224, 0.1);
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+        }
+
+        .privacy-description {
+            font-size: 18px;
+            color: #6c757d;
+            margin-bottom: 40px;
+        }
+
+        .privacy-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+
+        .privacy-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .privacy-point i {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-top: 3px;
+        }
+
+        .privacy-point-text {
+            color: #6c757d;
+        }
+
+        /* Testimonial Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 18px;
+            color: #6c757d;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-text::before {
+            content: """;
+            font-size: 60px;
+            color: rgba(77, 157, 224, 0.2);
+            position: absolute;
+            top: -20px;
+            left: -20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .testimonial-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-info p {
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        /* Download Section */
+        .download {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #4D9DE0 0%, #3D7AB3 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .download h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .download p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .footer-logo h3 {
+            font-size: 24px;
+            color: white;
+        }
+
+        .footer-description {
+            color: #adb5bd;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+        }
+
+        .footer-links h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 14px;
+        }
+
+        /* Language Specific Styles */
+        [lang="en"] .zh {
+            display: none;
+        }
+
+        [lang="zh"] .en {
+            display: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .app-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features-grid,
+            .privacy-points {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark-color);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body lang="en">
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://placehold.co/100x100" alt="PhotoBook Logo">
+                <h1 class="en">PhotoBook</h1>
+                <h1 class="zh">宝宝成长记录</h1>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-links">
+                <a href="#features" class="en">Features</a>
+                <a href="#features" class="zh">功能特点</a>
+                <a href="#privacy" class="en">Privacy</a>
+                <a href="#privacy" class="zh">隐私保护</a>
+                <a href="#download" class="en">Download</a>
+                <a href="#download" class="zh">下载应用</a>
+                <button class="language-toggle" onclick="toggleLanguage()">
+                    <span class="en">中文</span>
+                    <span class="zh">English</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2 class="en">Capture Every Precious Moment of Your Baby's Growth</h2>
+            <h2 class="zh">记录宝宝成长的每一个珍贵瞬间</h2>
+            <p class="en">A privacy-focused app designed to help parents document and cherish their baby's journey from day one.</p>
+            <p class="zh">一款注重隐私的应用，帮助父母记录和珍藏宝宝从出生开始的成长历程。</p>
+            <div class="app-badges">
+                <a href="#download">
+                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on App Store" class="app-badge">
+                </a>
+            </div>
+            <img src="https://placehold.co/800x500" alt="PhotoBook App Screenshot" class="app-screenshot">
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title en">Key Features</h2>
+            <h2 class="section-title zh">核心功能</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="feature-title en">Photo & Video Memories</h3>
+                    <h3 class="feature-title zh">照片和视频记忆</h3>
+                    <p class="feature-description en">Import and organize photos and videos in a beautiful timeline to track your baby's growth.</p>
+                    <p class="feature-description zh">导入并在精美的时间轴中整理照片和视频，追踪宝宝的成长历程。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="feature-title en">Digital Journal</h3>
+                    <h3 class="feature-title zh">电子日记</h3>
+                    <p class="feature-description en">Write notes and keep a journal of special milestones, funny stories, and everyday moments.</p>
+                    <p class="feature-description zh">记录特别的里程碑、有趣的故事和日常生活点滴。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="feature-title en">Smart Timeline</h3>
+                    <h3 class="feature-title zh">智能时间轴</h3>
+                    <p class="feature-description en">See your baby's development organized chronologically for easy reminiscing.</p>
+                    <p class="feature-description zh">查看宝宝按时间顺序整理的发展历程，轻松回忆成长点滴。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="feature-title en">iCloud Sync</h3>
+                    <h3 class="feature-title zh">iCloud 同步</h3>
+                    <p class="feature-description en">Safely sync data across your Apple devices to never lose precious memories.</p>
+                    <p class="feature-description zh">安全地在您的 Apple 设备间同步数据，珍贵回忆永不丢失。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 class="feature-title en">Multi-Baby Support</h3>
+                    <h3 class="feature-title zh">多宝宝支持</h3>
+                    <p class="feature-description en">Create separate profiles for each of your children in one convenient app.</p>
+                    <p class="feature-description zh">在一个应用中为每个孩子创建单独的档案。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="feature-title en">Privacy First</h3>
+                    <h3 class="feature-title zh">隐私优先</h3>
+                    <p class="feature-description en">Your data stays on your device and personal iCloud, never on our servers.</p>
+                    <p class="feature-description zh">您的数据只存储在设备和个人 iCloud 中，从不上传至我们的服务器。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="privacy" id="privacy">
+        <div class="container">
+            <span class="privacy-badge en">Your Privacy Matters</span>
+            <span class="privacy-badge zh">您的隐私至关重要</span>
+            <h2 class="section-title en">Designed With Privacy in Mind</h2>
+            <h2 class="section-title zh">以隐私为设计核心</h2>
+            <div class="privacy-content">
+                <p class="privacy-description en">We believe your family memories are personal and should remain private. That's why we've built PhotoBook with a focus on privacy from the ground up.</p>
+                <p class="privacy-description zh">我们相信，家庭记忆属于个人，应当保持私密。因此，我们从零开始构建 PhotoBook，以隐私为核心。</p>
+                <div class="privacy-points">
+                    <div class="privacy-point">
+                        <i class="fas fa-server"></i>
+                        <p class="privacy-point-text en">No server design — all data stays on your device.</p>
+                        <p class="privacy-point-text zh">无服务器设计 — 所有数据保存在您的设备上。</p>
+                    </div>
+                    <div class="privacy-point">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p class="privacy-point-text en">iCloud backup only to your personal account.</p>
+                        <p class="privacy-point-text zh">数据仅备份到您的个人 iCloud 账户。</p>
+                    </div>
+                    <div class="privacy-point">
+                        <i class="fas fa-eye-slash"></i>
+                        <p class="privacy-point-text en">No analytics or tracking of your usage patterns.</p>
+                        <p class="privacy-point-text zh">不分析或跟踪您的使用模式。</p>
+                    </div>
+                    <div class="privacy-point">
+                        <i class="fas fa-ad"></i>
+                        <p class="privacy-point-text en">No ads or monetization of your personal data.</p>
+                        <p class="privacy-point-text zh">无广告，不通过个人数据获利。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title en">What Parents Say</h2>
+            <h2 class="section-title zh">家长们的评价</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <p class="testimonial-text en">PhotoBook has become our family's digital treasure chest. I love that I can capture everyday moments and special milestones in one secure place, without worrying about privacy.</p>
+                    <p class="testimonial-text zh">PhotoBook 已成为我们家庭的数字宝藏。我喜欢能够在一个安全的地方捕捉日常瞬间和特殊里程碑，而不必担心隐私问题。</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah M." class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="en">Sarah M.</h4>
+                            <h4 class="zh">莎拉 M.</h4>
+                            <p class="en">Mother of two</p>
+                            <p class="zh">两个孩子的妈妈</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text en">As a privacy-conscious parent, I appreciate how PhotoBook keeps our family memories private. The timeline feature makes it easy to look back on how much our little one has grown.</p>
+                    <p class="testimonial-text zh">作为一个注重隐私的父亲，我很欣赏 PhotoBook 如何保护我们家庭记忆的私密性。时间轴功能让回顾孩子的成长变得简单。</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David L." class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4 class="en">David L.</h4>
+                            <h4 class="zh">大卫 L.</h4>
+                            <p class="en">Father of one</p>
+                            <p class="zh">一个孩子的爸爸</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="download" id="download">
+        <div class="container">
+            <h2 class="en">Start Recording Your Baby's Journey Today</h2>
+            <h2 class="zh">今天就开始记录宝宝的成长历程</h2>
+            <p class="en">Download PhotoBook now and create a beautiful, private collection of your baby's most precious moments.</p>
+            <p class="zh">立即下载 PhotoBook，创建一个美丽、私密的宝宝珍贵瞬间集合。</p>
+            <div class="app-badges">
+                <a href="#">
+                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on App Store" class="app-badge">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="https://placehold.co/100x100" alt="PhotoBook Logo">
+                        <h3 class="en">PhotoBook</h3>
+                        <h3 class="zh">宝宝成长记录</h3>
+                    </div>
+                    <p class="footer-description en">A privacy-focused app to document your baby's growth journey.</p>
+                    <p class="footer-description zh">一款注重隐私的应用，记录宝宝的成长历程。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 class="en">Quick Links</h4>
+                    <h4 class="zh">快速链接</h4>
+                    <ul>
+                        <li><a href="#features" class="en">Features</a></li>
+                        <li><a href="#features" class="zh">功能特点</a></li>
+                        <li><a href="#privacy" class="en">Privacy</a></li>
+                        <li><a href="#privacy" class="zh">隐私保护</a></li>
+                        <li><a href="#download" class="en">Download</a></li>
+                        <li><a href="#download" class="zh">下载应用</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="en">Legal</h4>
+                    <h4 class="zh">法律条款</h4>
+                    <ul>
+                        <li><a href="/privacy-policy.html" class="en">Privacy Policy</a></li>
+                        <li><a href="/privacy-policy.html" class="zh">隐私政策</a></li>
+                        <li><a href="/terms-of-use.html" class="en">Terms of Use</a></li>
+                        <li><a href="/terms-of-use.html" class="zh">使用条款</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="en">Contact</h4>
+                    <h4 class="zh">联系我们</h4>
+                    <ul>
+                        <li><a href="mailto:support@upmemo.com">support@upmemo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="en">© 2023 PhotoBook App. All Rights Reserved.</p>
+                <p class="zh">© 2023 宝宝成长记录应用。保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language toggle
+        function toggleLanguage() {
+            const currentLang = document.body.getAttribute('lang');
+            if (currentLang === 'en') {
+                document.body.setAttribute('lang', 'zh');
+                localStorage.setItem('preferredLanguage', 'zh');
+            } else {
+                document.body.setAttribute('lang', 'en');
+                localStorage.setItem('preferredLanguage', 'en');
+            }
+        }
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+
+        // Load preferred language from local storage
+        document.addEventListener('DOMContentLoaded', function() {
+            const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+            document.body.setAttribute('lang', preferredLanguage);
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#') {
+                        document.querySelector(targetId).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('show');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
